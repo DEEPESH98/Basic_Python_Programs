@@ -7,15 +7,12 @@ import pyttsx3
 import webbrowser
 import speech_recognition as sr
 import datetime
-import wolframalpha
 import time
 
 
 a=input("Enter your name =")
 
 engine = pyttsx3.init('sapi5')
-
-client = wolframalpha.Client('Your_App_ID')
 
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[len(voices)-1].id)
