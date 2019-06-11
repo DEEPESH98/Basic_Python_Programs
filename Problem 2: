@@ -9,15 +9,14 @@ import pyttsx3
 import webbrowser
 import speech_recognition as sr
 import datetime
-import wolframalpha
 import time
 
 engine = pyttsx3.init('sapi5')
 
-client = wolframalpha.Client('Your_App_ID')
+
 
 voices = engine.getProperty('voices')
-engine.setProperty('voice', voices[len(voices)-1].id)
+engine.setProperty('voice', voices[0].id)
 
 def speak(audio):
     print('Computer: ' + audio)
@@ -40,7 +39,7 @@ greetMe()
 
 from googlesearch import search
 
-speak('plz enter or speck topic')
+speak(' plz speck topic your search topic')
 
 url=[]
 
@@ -76,5 +75,8 @@ if __name__ == '__main__':
                 url.append(i)
         
         print(url)
+            
+        
+
             
         
