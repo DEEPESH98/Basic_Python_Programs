@@ -1,15 +1,15 @@
 import os
 
-
 def checkDigit(name):
-    return any(char.isdigit() for char in name )
-
-
-name=input('Enter String :')
-if not checkDigit(name):
-    pas="hello"+name
-    com="useradd -p $(openssl passwd -1 "+pas+") "+name
-    os.system(com)
+    for char in name:
+        a = char.isdigit()
+ return a
+        
+n=input('Enter any name : ')
+if not checkDigit(n):
+    pas="hello"+n
+    user="useradd -p $(openssl passwd -1 "+pas+") "+n
+    os.system(user)
 
 else:
     print("user Cannot be created")
