@@ -1,0 +1,65 @@
+How do you reverse a string in Python?
+Python
+In Python, strings are ordered sequences of character data.
+
+There is no built-in method to reverse a string. However, strings can be reversed in several different ways.
+
+
+Methods
+Three methods to reverse a string are explained below:
+
+1. Slicing
+Strings can be reversed using slicing. To reverse a string, we simply create a slice that starts with the length of the string, and ends at index 0.
+
+To reverse a string using slicing, write:
+
+stringname[stringlength::-1] # method 1 
+Or write without specifying the length of the string:
+
+stringname[::-1] # method2
+The slice statement means start at string length, end at position 0, move with the step -1 (or one step backward).
+
+12345
+str="Python" # initial string
+stringlength=len(str) # calculate length of the list
+slicedString=str[stringlength::-1] # slicing 
+print (slicedString) # print the reversed string
+
+
+
+
+2. Loop
+To start, let’s create a new array called reversedString[].
+
+We can then loop over the list with iterating variable index initialized with the length of the list.
+
+In each iteration, concatenate value of str[index-1] with reverseString
+Decrement the index.
+We then simply keep iterating until the index is less than zero.
+
+12345678
+str = "Python" # initial string
+reversedString=[]
+index = len(str) # calculate length of string and save in index
+while index > 0: 
+    reverseString += str[ index - 1 ] # save the value of str[index-1] in reverseString
+    index = index - 1 # decrement index
+print(reversedString) # reversed string
+
+
+
+
+3. Use join
+This is a powerful technique that takes advantage of Python’s iterator protocol. This technique reverses a string using reverse iteration with the reversed() built-in function to cycle through the elements in the string in reverse order and then use .join() method to merge all of the characters resulting from the reversed iteration into a new string.
+
+The general syntax is
+
+str="Python" 
+reversedstring=''.join(reversed(str))
+The following Python code demonstrates the concept.
+
+
+str = 'Python' #initial string
+reversed=''.join(reversed(str)) # .join() method merges all of the characters resulting from the reversed iteration into a new string
+print(reversed) #print the reversed string
+
