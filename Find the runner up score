@@ -1,0 +1,24 @@
+def remove(m, b=[]):
+    j = len(b)
+    for i in range(0, j):
+        if b[i] == m:
+            b.remove(m)
+            print(b)
+            break
+    return b
+
+
+a = int(input())
+b = []
+
+b = list(map(int,input().strip().split()))[:a] # REPLACE LOOPS 
+
+print(b)
+
+b.sort()
+m = max(b)
+for i in range(0, a):
+    j1 = remove(m, b)
+
+m1 = max(j1)
+print(m1)
