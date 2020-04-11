@@ -1,0 +1,20 @@
+
+s = int(input())
+result = set(map(int, input().split()))
+N = int(input())
+
+for n in range(N):
+    x = input().split(" ")
+    command = x[0]
+    if command == 'discard':
+        result.discard(int(x[1]))
+    elif command == 'pop':
+        result.pop()
+    elif command == 'remove':
+        result.remove(int(x[1]))
+
+result1=list(result)
+sum = 0
+for i in range(0,len(result1)):
+    sum = sum + result1[i]
+print(sum)
