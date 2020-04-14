@@ -1,0 +1,11 @@
+main_set = set(map(int, input().rsplit()))
+# print(main_set)
+
+n = int(input())
+l = []
+
+for i in range(0, n):
+    dub_set = set(map(int, input().rsplit()))
+    l.append(main_set.issuperset(dub_set))
+
+print(all(l))
