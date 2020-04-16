@@ -1,0 +1,13 @@
+from __future__ import print_function
+from itertools import *
+
+for i,j in groupby(map(int,list(raw_input()))):
+    print(tuple([len(list(j)), i]) ,end = " ")
+    
+    ------------------------------------------------------------------------------------------
+    from  itertools import groupby
+sequence ='1222311'
+groups = [(len(list(c)), int(s)) for s, c in groupby(sequence)]
+# c=list(groupby(a,c))
+print(*groups)
+print(groups)
