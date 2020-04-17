@@ -1,0 +1,14 @@
+arr1 = list(map(int,input().split()))
+arr2 = list(map(int,input().split()))
+bob = 0
+Alice = 0
+sum = 0
+for i in range(0,len(arr1)):
+    if arr1[i]>arr2[i]:
+        Alice = Alice +1
+    elif arr1[i]<arr2[i]:
+        bob = bob + 1
+    else:
+        sum = sum+0
+
+print(f'{Alice} {bob}')
