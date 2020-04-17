@@ -1,0 +1,14 @@
+n = int(input())
+
+new_list = list(map(int,input().split()))
+new_list.sort()
+
+compyer = new_list[len(new_list)-1]
+
+sum = 0
+
+for i in range(0,len(new_list)):
+    if compyer == new_list[i]:
+        sum = sum + 1
+
+print(sum)
