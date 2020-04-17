@@ -1,0 +1,19 @@
+n = int(input()) # number of list
+matrix_list = []
+Dignal_Right = 0
+Dignal_Left = 0
+# input Matrix
+for i in range(n):
+    arr = list(map(int,input().split()))
+    matrix_list.append(arr)
+
+for i in range(n):
+    j=i
+    Dignal_Left = Dignal_Left + matrix_list[i][j]
+
+
+for i in range(0,n):
+    j=(n-1)-i
+    Dignal_Right = Dignal_Right + matrix_list[i][j]
+
+print(abs(Dignal_Left-Dignal_Right))
