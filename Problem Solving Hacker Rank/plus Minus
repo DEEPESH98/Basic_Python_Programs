@@ -1,0 +1,17 @@
+n = int(input())
+arr1 = list(map(int,input().split()))
+
+pluse = 0
+minuse = 0
+Zero = 0
+for i in range(n):
+    if arr1[i]>0:
+        pluse = pluse +1
+    elif arr1[i]<0:
+        minuse  = minuse + 1
+    else:
+        Zero = Zero +0
+
+print(pluse/n)
+print(minuse/n)
+print(Zero/n)
