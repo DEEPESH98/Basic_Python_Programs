@@ -1,0 +1,14 @@
+from itertools import *
+
+list1 = list(map(int,input().split()))
+
+c = list(combinations(list1,4))
+new_list = []
+
+for i in range(0,len(c)):
+    sum = 0
+    for j in range(4):
+        sum = sum + c[i][j]
+    new_list.append(sum)
+
+print(f'{min(new_list)} {max(new_list)}')
