@@ -1,0 +1,13 @@
+n = int(input())
+l = list(map(int,input().split()))
+temp = 0
+
+
+for i in range(0,len(l)-1):
+    # print(*l)
+    for j in range(0,len(l)-1):
+        if l[j]>l[j+1]:
+            temp = l[j]
+            l[j] = l[j+1]
+            l[j+1] = temp
+print(*l)
