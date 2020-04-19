@@ -12,7 +12,7 @@ In the best case, where the array was already sorted, no element will need to be
 
 However, we usually focus on the worst-case running time (computer scientists are pretty pessimistic). The worst case for Insertion Sort occurs when the array is in reverse order. To insert each number, the algorithm will have to shift over that number to the beginning of the array. Sorting the entire array of  numbers will therefore take  operations, which is  (almost ). Computer scientists just round that up (pick the dominant term) to  and say that Insertion Sort is an " time" algorithm.
 
-
+Check This Link -> https://www.hackerrank.com/challenges/runningtime/problem
 
 n = int(input())
 l = list(map(int,input().split()))
