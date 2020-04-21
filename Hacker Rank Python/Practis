@@ -1,0 +1,9 @@
+n = int(input())
+c = list(map(int,input().split()))
+n1 = int(input())
+c1 = list(map(int,input().split()))
+
+set1 = set(c)
+set2 = set(c1)
+print(set1)
+print(set2)
