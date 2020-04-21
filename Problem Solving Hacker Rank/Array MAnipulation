@@ -1,0 +1,17 @@
+a = input().split()
+
+n = int(a[0])
+list_number = int(a[1])
+
+orignal_list = []
+
+for i in range(0,n):
+    orignal_list.append(0)
+
+for i in range(0,list_number):
+    c = list(map(int,input().split()))
+    for j in range(c[0]-1,c[1]):
+        orignal_list[j] = orignal_list[j] + c[2]
+
+print(max(orignal_list))
+
