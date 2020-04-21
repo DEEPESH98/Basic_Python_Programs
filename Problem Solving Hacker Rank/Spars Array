@@ -1,0 +1,25 @@
+n = int(input())
+string1 = []
+for i in range(0,n):
+    c=input()
+    string1.append(c)
+
+q = int(input())
+queries1 = []
+for i in range(0,q):
+    d=input()
+    queries1.append(d)
+
+
+count_list = []
+
+for i in range(0,q):
+    count = 0
+    check = queries1[i]
+    for j in range(0,n):
+        if check == string1[j]:
+            count = count + 1
+    count_list.append(count)
+
+for i in range(0,len(count_list)):
+    print(count_list[i])
