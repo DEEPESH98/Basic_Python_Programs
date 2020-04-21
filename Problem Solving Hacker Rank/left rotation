@@ -1,0 +1,15 @@
+a = input().split()
+n = int(a[0])
+rotetion = int(a[1])
+list1 = list(map(int,input().split()))
+
+temp = 0
+
+
+for i in range(0,rotetion):
+    temp = list1[0]
+    for j in range(0,len(list1)-1):
+        list1[j] = list1[j+1]
+    list1[n-1] = temp
+
+print(*list1)
