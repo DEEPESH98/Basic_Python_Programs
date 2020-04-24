@@ -1,0 +1,26 @@
+n = list(input())
+n_set = list(set(n))
+l = []
+new_list = []
+
+for i in range(0,len(n_set)):
+    count=0
+    for j in range(0,len(n)):
+        if n_set[i]==n[j]:
+            count = count + 1
+    l.append(count)
+
+for i in range(0,len(l)):
+    if l[i]==1:
+        new_list.append(n_set[i])
+    elif l[i]%2!=0:
+        new_list.append(n_set[i])
+    elif l[i]==0:
+        c=0
+
+new_list.sort()
+
+if len(new_list)==0:
+    print("Empty String")
+else:
+    print("".join(new_list))
