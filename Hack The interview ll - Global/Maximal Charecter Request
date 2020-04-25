@@ -1,0 +1,30 @@
+def count(se,arr1):
+    count1=0
+    for i in range(0,len(arr1)):
+        if se==arr1[i]:
+            count1 = count1 + 1
+    return count1
+
+
+def making_list(arr,n1,n2):
+    empty_list = []
+    for i in range(n1,n2+1):
+        empty_list.append(arr[i])
+    temp = count(max(empty_list),empty_list)
+    empty_list.clear()
+    return temp
+
+
+n = int(input())
+new_string = input()
+uppertolower = new_string.lower()
+string_c = list(uppertolower)
+
+number_process = int(input())
+
+for i in range(0,number_process):
+    proce = input().split()
+    n1 = int(proce[0])
+    n2 = int(proce[1])
+    c = making_list(string_c,n1,n2)
+    print(c)
