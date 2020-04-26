@@ -1,0 +1,36 @@
+n = int(input())
+unsorted_list = list(map(int,input().split())) # user input Usorted array
+Counting_list = [] # count number of elements
+max_value = max(unsorted_list) + 1  # maximum number in all array
+
+# Counting elements process
+for i in range(0,max_value):
+    count = unsorted_list.count(i)
+    Counting_list.append(count)
+
+new_comparing_list = [] # new sum list
+count = 0
+# process to counting list
+for i in range(0,max_value):
+    count = count + Counting_list[i]
+    new_comparing_list.append(count)
+
+
+# Array sorting process
+
+sorted_list = []
+for i in range(0,n+1):
+    sorted_list.append(0)
+
+
+for i in range(0,n):
+    element = unsorted_list[i]
+    index_number = new_comparing_list[element]
+    sorted_list[index_number] = sorted_list[index_number] + element
+    new_comparing_list[element] = new_comparing_list[element]-1
+
+for i in range(1,len(sorted_list)):
+    print(sorted_list[i],end=" ")
+
+
+
