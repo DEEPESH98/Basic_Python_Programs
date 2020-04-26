@@ -1,0 +1,13 @@
+n = int(input())
+unsorted_list = list(map(int,input().split()))
+Counting_list = []
+max_value = max(unsorted_list) + 1
+
+
+for i in range(0,100):
+    count = unsorted_list.count(i)
+    Counting_list.append(count)
+print(*Counting_list)
+
+
+
