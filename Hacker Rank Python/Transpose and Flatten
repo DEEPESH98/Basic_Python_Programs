@@ -1,0 +1,15 @@
+import numpy as np
+n = input().split()
+n1=int(n[0])
+n2=int(n[1])
+l=[]
+for i in range(0,n1):
+    arr = list(map(int,input().split()))
+    l.append(arr)
+arr1 = np.array(l)
+
+print(arr1.transpose())
+print(arr1.flatten())
+
+
+
